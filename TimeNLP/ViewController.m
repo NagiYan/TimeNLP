@@ -42,7 +42,7 @@
     NSArray<TimeUnit*>* times = [normalizer parse:content];// 抽取时间
     NSLog(@"%@\n\n", content);
     [times enumerateObjectsUsingBlock:^(TimeUnit * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"全天:%@ %@ %@", obj.isAllDayTime?@"是":@"否" , obj.timeExpression, obj.time);
+        NSLog(@"全天:%@ %@ %@", obj.isAllDayTime?@"是":@"否" , obj.timeExpression, [obj.time ng_fs_stringWithFormat:@"yyyy-MM-dd HH:mm:ss"]);
     }];
 }
 
