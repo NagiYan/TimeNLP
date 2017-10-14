@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11F748301F90E98500AAF3E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7482F1F90E98500AAF3E6 /* AppDelegate.m */; };
+		11F748331F90E98500AAF3E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F748321F90E98500AAF3E6 /* ViewController.m */; };
+		11F748361F90E98500AAF3E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F748341F90E98500AAF3E6 /* Main.storyboard */; };
+		11F748381F90E98500AAF3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F748371F90E98500AAF3E6 /* Assets.xcassets */; };
+		11F7483B1F90E98500AAF3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F748391F90E98500AAF3E6 /* LaunchScreen.storyboard */; };
+		11F7483E1F90E98500AAF3E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7483D1F90E98500AAF3E6 /* main.m */; };
+		11F748471F90E9D400AAF3E6 /* TimeNormalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F748461F90E9D400AAF3E6 /* TimeNormalizer.m */; };
+		11F7484A1F90FA9800AAF3E6 /* TimeUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F748491F90FA9800AAF3E6 /* TimeUnit.m */; };
+		11F7484D1F90FAB400AAF3E6 /* TimePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7484C1F90FAB400AAF3E6 /* TimePoint.m */; };
+		11F748501F90FACF00AAF3E6 /* NSString+NGPreHanding.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7484F1F90FACF00AAF3E6 /* NSString+NGPreHanding.m */; };
+		11F748531F90FC7A00AAF3E6 /* NSDate+NGFSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F748511F90FC7A00AAF3E6 /* NSDate+NGFSExtension.m */; };
+		11F748561F91EC1600AAF3E6 /* NSArray+NGPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F748551F91EC1600AAF3E6 /* NSArray+NGPattern.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11F7482B1F90E98400AAF3E6 /* TimeNLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeNLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F7482E1F90E98400AAF3E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11F7482F1F90E98500AAF3E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11F748311F90E98500AAF3E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		11F748321F90E98500AAF3E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		11F748351F90E98500AAF3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11F748371F90E98500AAF3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11F7483A1F90E98500AAF3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11F7483C1F90E98500AAF3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F7483D1F90E98500AAF3E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11F748451F90E9D400AAF3E6 /* TimeNormalizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeNormalizer.h; sourceTree = "<group>"; };
+		11F748461F90E9D400AAF3E6 /* TimeNormalizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeNormalizer.m; sourceTree = "<group>"; };
+		11F748481F90FA9800AAF3E6 /* TimeUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeUnit.h; sourceTree = "<group>"; };
+		11F748491F90FA9800AAF3E6 /* TimeUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeUnit.m; sourceTree = "<group>"; };
+		11F7484B1F90FAB400AAF3E6 /* TimePoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePoint.h; sourceTree = "<group>"; };
+		11F7484C1F90FAB400AAF3E6 /* TimePoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePoint.m; sourceTree = "<group>"; };
+		11F7484E1F90FACF00AAF3E6 /* NSString+NGPreHanding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NGPreHanding.h"; sourceTree = "<group>"; };
+		11F7484F1F90FACF00AAF3E6 /* NSString+NGPreHanding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NGPreHanding.m"; sourceTree = "<group>"; };
+		11F748511F90FC7A00AAF3E6 /* NSDate+NGFSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NGFSExtension.m"; sourceTree = "<group>"; };
+		11F748521F90FC7A00AAF3E6 /* NSDate+NGFSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NGFSExtension.h"; sourceTree = "<group>"; };
+		11F748541F91EC1600AAF3E6 /* NSArray+NGPattern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+NGPattern.h"; sourceTree = "<group>"; };
+		11F748551F91EC1600AAF3E6 /* NSArray+NGPattern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NGPattern.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11F748281F90E98400AAF3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11F748221F90E98400AAF3E6 = {
+			isa = PBXGroup;
+			children = (
+				11F7482D1F90E98400AAF3E6 /* TimeNLP */,
+				11F7482C1F90E98400AAF3E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11F7482C1F90E98400AAF3E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11F7482B1F90E98400AAF3E6 /* TimeNLP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11F7482D1F90E98400AAF3E6 /* TimeNLP */ = {
+			isa = PBXGroup;
+			children = (
+				11F748441F90E9B600AAF3E6 /* nlp */,
+				11F7482E1F90E98400AAF3E6 /* AppDelegate.h */,
+				11F7482F1F90E98500AAF3E6 /* AppDelegate.m */,
+				11F748311F90E98500AAF3E6 /* ViewController.h */,
+				11F748321F90E98500AAF3E6 /* ViewController.m */,
+				11F748341F90E98500AAF3E6 /* Main.storyboard */,
+				11F748371F90E98500AAF3E6 /* Assets.xcassets */,
+				11F748391F90E98500AAF3E6 /* LaunchScreen.storyboard */,
+				11F7483C1F90E98500AAF3E6 /* Info.plist */,
+				11F7483D1F90E98500AAF3E6 /* main.m */,
+			);
+			path = TimeNLP;
+			sourceTree = "<group>";
+		};
+		11F748441F90E9B600AAF3E6 /* nlp */ = {
+			isa = PBXGroup;
+			children = (
+				11F748521F90FC7A00AAF3E6 /* NSDate+NGFSExtension.h */,
+				11F748511F90FC7A00AAF3E6 /* NSDate+NGFSExtension.m */,
+				11F748451F90E9D400AAF3E6 /* TimeNormalizer.h */,
+				11F748461F90E9D400AAF3E6 /* TimeNormalizer.m */,
+				11F748481F90FA9800AAF3E6 /* TimeUnit.h */,
+				11F748491F90FA9800AAF3E6 /* TimeUnit.m */,
+				11F7484B1F90FAB400AAF3E6 /* TimePoint.h */,
+				11F7484C1F90FAB400AAF3E6 /* TimePoint.m */,
+				11F7484E1F90FACF00AAF3E6 /* NSString+NGPreHanding.h */,
+				11F7484F1F90FACF00AAF3E6 /* NSString+NGPreHanding.m */,
+				11F748541F91EC1600AAF3E6 /* NSArray+NGPattern.h */,
+				11F748551F91EC1600AAF3E6 /* NSArray+NGPattern.m */,
+			);
+			path = nlp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11F7482A1F90E98400AAF3E6 /* TimeNLP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11F748411F90E98500AAF3E6 /* Build configuration list for PBXNativeTarget "TimeNLP" */;
+			buildPhases = (
+				11F748271F90E98400AAF3E6 /* Sources */,
+				11F748281F90E98400AAF3E6 /* Frameworks */,
+				11F748291F90E98400AAF3E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeNLP;
+			productName = TimeNLP;
+			productReference = 11F7482B1F90E98400AAF3E6 /* TimeNLP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11F748231F90E98400AAF3E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = NAGI;
+				TargetAttributes = {
+					11F7482A1F90E98400AAF3E6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 11F748261F90E98400AAF3E6 /* Build configuration list for PBXProject "TimeNLP" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11F748221F90E98400AAF3E6;
+			productRefGroup = 11F7482C1F90E98400AAF3E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11F7482A1F90E98400AAF3E6 /* TimeNLP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11F748291F90E98400AAF3E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F7483B1F90E98500AAF3E6 /* LaunchScreen.storyboard in Resources */,
+				11F748381F90E98500AAF3E6 /* Assets.xcassets in Resources */,
+				11F748361F90E98500AAF3E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11F748271F90E98400AAF3E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F748331F90E98500AAF3E6 /* ViewController.m in Sources */,
+				11F7484D1F90FAB400AAF3E6 /* TimePoint.m in Sources */,
+				11F748471F90E9D400AAF3E6 /* TimeNormalizer.m in Sources */,
+				11F7484A1F90FA9800AAF3E6 /* TimeUnit.m in Sources */,
+				11F748501F90FACF00AAF3E6 /* NSString+NGPreHanding.m in Sources */,
+				11F7483E1F90E98500AAF3E6 /* main.m in Sources */,
+				11F748561F91EC1600AAF3E6 /* NSArray+NGPattern.m in Sources */,
+				11F748531F90FC7A00AAF3E6 /* NSDate+NGFSExtension.m in Sources */,
+				11F748301F90E98500AAF3E6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11F748341F90E98500AAF3E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11F748351F90E98500AAF3E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11F748391F90E98500AAF3E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11F7483A1F90E98500AAF3E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11F7483F1F90E98500AAF3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11F748401F90E98500AAF3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11F748421F90E98500AAF3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77MDU2XVLC;
+				INFOPLIST_FILE = TimeNLP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aria.TimeNLP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11F748431F90E98500AAF3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77MDU2XVLC;
+				INFOPLIST_FILE = TimeNLP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aria.TimeNLP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11F748261F90E98400AAF3E6 /* Build configuration list for PBXProject "TimeNLP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F7483F1F90E98500AAF3E6 /* Debug */,
+				11F748401F90E98500AAF3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11F748411F90E98500AAF3E6 /* Build configuration list for PBXNativeTarget "TimeNLP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F748421F90E98500AAF3E6 /* Debug */,
+				11F748431F90E98500AAF3E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11F748231F90E98400AAF3E6 /* Project object */;
+}
