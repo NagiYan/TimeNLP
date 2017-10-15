@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self test:@"礼拜一开会"];
+    [self test:@"2016-06-09"];
     [self test:@"下月1号下午3点至5点到图书馆还书"];
     [self test:@"6月3  春游"];
     [self test:@"17年12月8日到明年1月半"];
@@ -31,7 +32,6 @@
     [self test:@"6-3 春游"];
     [self test:@"6:30 起床"];
     [self test:@"下下周一开会"];
-    [self test:@"礼拜一开会"];
     [self test:@"早上六点起床"];
     [self test:@"下周一下午三点开会"];
     [self test:@"我真的啊 本周日到下周日出差"];
@@ -40,7 +40,7 @@
 - (void)test:(NSString*)content {
     TimeNormalizer* normalizer = [TimeNormalizer new];
     NSArray<TimeUnit*>* times = [normalizer parse:content];// 抽取时间
-    NSLog(@"%@\n\n", content);
+    NSLog(@"# %@\n\n", content);
     [times enumerateObjectsUsingBlock:^(TimeUnit * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"全天:%@ %@ %@", obj.isAllDayTime?@"是":@"否" , obj.timeExpression, [obj.time ng_fs_stringWithFormat:@"yyyy-MM-dd HH:mm:ss"]);
     }];

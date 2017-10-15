@@ -175,10 +175,11 @@
  * add by kexm
  */
 - (void)normSetMonthFuzzyDay {
-    NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"((10)|(11)|(12)|([1-9]))(月|\\.|\\-)([0-3][0-9]|[1-9])"];
+    //NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"((10)|(11)|(12)|([1-9]))(月|\\.|-|/)([0-3][0-9]|[1-9])"];
+    NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"((10)|(11)|(12)|(0[1-9])|([1-9]))(月|\\.|-|/)([0-3][0-9]|[1-9])(?!(\\.|-|/))"];
     if (match.count > 0) {
         NSString* matchStr = [self.timeExpression substringWithRange:match[0].range];
-        match = [self p_match:matchStr WithRule:@"(月|\\.|\\-)"];
+        match = [self p_match:matchStr WithRule:@"(月|\\.|-|/)"];
         if (match.count > 0) {
             NSString* month = [matchStr substringWithRange:NSMakeRange(0, match[0].range.location)];
             NSString* date = [matchStr substringFromIndex:match[0].range.location+1];
@@ -806,8 +807,8 @@
         curDate = [NSDate ng_fs_dateFromString:self.normalizer.timeBase format:@"yyyy-MM-dd-HH-mm-ss"];
     }
     NSInteger curWeekday = [curDate ng_fs_weekday] - 1;
-
-    if (curWeekday < weekday || date.timeIntervalSince1970 > curDate.timeIntervalSince1970) {
+    curWeekday = curWeekday == 0 ? 7 : curWeekday;
+    if (curWeekday <= weekday || date.timeIntervalSince1970 > curDate.timeIntervalSince1970) {
         return date;
     }
     //准备增加的时间单位是被检查的时间的上一级，将上一级时间+1
