@@ -214,8 +214,6 @@
     NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"(?<!(周|星期|礼拜))([0-2]?[0-9])(?=(点|时))"];
     if (match.count > 0) {
         _tp.tunit[3] = @([[self.timeExpression substringWithRange:match[0].range] integerValue]);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
     
@@ -233,8 +231,6 @@
     if (match.count > 0) {
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“凌晨”这种情况的处理 @author kexm*/
             _tp.tunit[3] = @(rt_day_break);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
     
@@ -242,8 +238,6 @@
     if (match.count > 0) {
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“早上/早晨/早间”这种情况的处理 @author kexm*/
             _tp.tunit[3] = @(rt_early_morning);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
     
@@ -251,8 +245,6 @@
     if (match.count > 0) {
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“上午”这种情况的处理 @author kexm*/
             _tp.tunit[3] = @(rt_morning);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
 
@@ -262,8 +254,6 @@
             _tp.tunit[3] = @([_tp.tunit[3] integerValue] + 12);
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“中午/午间”这种情况的处理 @author kexm*/
             _tp.tunit[3] = @(rt_noon);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
     
@@ -273,8 +263,6 @@
             _tp.tunit[3] = @([_tp.tunit[3] integerValue] + 12);
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“下午|午后”这种情况的处理  @author kexm*/
             _tp.tunit[3] = @(rt_afternoon);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
     
@@ -286,10 +274,10 @@
             _tp.tunit[3] = @(0);
         if ([_tp.tunit[3] integerValue] == -1) /**增加对没有明确时间点，只写了“下午|午后”这种情况的处理  @author kexm*/
             _tp.tunit[3] = @(rt_night);
-        /**处理倾向于未来时间的情况  @author kexm*/
-        [self p_preferFuture:3];
         self.isAllDayTime = NO;
     }
+    
+    [self p_preferFuture:3];
 }
 
 /**
@@ -325,7 +313,7 @@
     
     match = [self p_matchTimeExpressionWithRule:@"(?<=[点时])[3三]刻(?!钟)"];
     if (match.count > 0) {
-        _tp.tunit[4] = @(35);
+        _tp.tunit[4] = @(45);
         /**处理倾向于未来时间的情况  @author kexm*/
         [self p_preferFuture:4];
         self.isAllDayTime = NO;
@@ -777,9 +765,6 @@
     
     for (int i = 0; i < checkTimeIndex; i++) {
         _tp.tunit[i] = @([date ng_fs_valueBy:i]);
-        if (i == 1) {
-            _tp.tunit[i] = @([_tp.tunit[i] integerValue] + 1);
-        }
     }
 }
 
