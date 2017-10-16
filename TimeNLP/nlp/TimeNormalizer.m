@@ -55,9 +55,10 @@
  */
 - (NSArray<TimeUnit*>*)parse:(NSString*)target {
     self.target = target;
-    self.timeBase = [[NSDate date] ng_fs_stringWithFormat:@"yyyy-MM-dd-HH-mm-ss"];
-    // Calendar.getInstance().getTime()换成new
-    // Date？
+    if (!self.timeBase) {
+        self.timeBase = [[NSDate date] ng_fs_stringWithFormat:@"yyyy-MM-dd-HH-mm-ss"];
+    }
+
     self.oldTimeBase = self.timeBase;
     [self p_preHandling];
     _timeToken = [self timeEx:_target timeBase:_timeBase];
@@ -68,7 +69,7 @@
  * 待匹配字符串的清理空白符和语气助词以及大写数字转化的预处理
  */
 - (void)p_preHandling {
-    self.target = [self.target delKeyword:@"\\s+"]; // 清理空白符
+    //self.target = [self.target delKeyword:@"\\s+"]; // 清理空白符
     self.target = [self.target delKeyword:@"[的]+"]; // 清理语气助词
     self.target = [self.target numberTranslator];// 大写数字转化
     // TODO 处理大小写标点符号

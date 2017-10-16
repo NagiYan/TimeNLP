@@ -76,7 +76,7 @@
         result_tmp[i] = _tp.tunit[i].stringValue;
     }
     
-    NSDate* date = [NSDate date];
+    NSDate* date = [self p_now];
     
     if ([result_tmp[0] integerValue] != -1)
     {
@@ -751,7 +751,7 @@
         return;
     }
     /**5. 获取当前时间，如果识别到的时间小于当前时间，则将其上的所有级别时间设置为当前时间，并且其上一级的时间步长+1*/
-    NSDate* date = [NSDate date];
+    NSDate* date = [self p_now];
     if (self.normalizer.timeBase.length > 0) {
         date = [NSDate ng_fs_dateFromString:self.normalizer.timeBase format:@"yyyy-MM-dd-HH-mm-ss"];
     }
@@ -786,7 +786,7 @@
         if ([_tp.tunit[i] integerValue] != -1) return date;
     }
     /**获取当前是在周几，如果识别到的时间小于当前时间，则识别时间为下一周*/
-    NSDate* curDate = [NSDate date];
+    NSDate* curDate = [self p_now];
     if (self.normalizer.timeBase.length > 0) {
         curDate = [NSDate ng_fs_dateFromString:self.normalizer.timeBase format:@"yyyy-MM-dd-HH-mm-ss"];
     }
@@ -797,5 +797,14 @@
     }
     //准备增加的时间单位是被检查的时间的上一级，将上一级时间+1
     return [date ng_fs_dateByAddingWeeks:1];
+}
+
+- (NSDate*)p_now {
+    if (self.normalizer.timeBase.length > 0) {
+        return [NSDate ng_fs_dateFromString:self.normalizer.timeBase format:@"yyyy-MM-dd-HH-mm-ss"];
+    }
+    else {
+        return [NSDate date];
+    }
 }
 @end
