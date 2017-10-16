@@ -175,7 +175,6 @@
  * add by kexm
  */
 - (void)normSetMonthFuzzyDay {
-    //NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"((10)|(11)|(12)|([1-9]))(月|\\.|-|/)([0-3][0-9]|[1-9])"];
     NSArray<NSTextCheckingResult *>* match = [self p_matchTimeExpressionWithRule:@"((10)|(11)|(12)|(0[1-9])|([1-9]))(月|\\.|-|/)([0-3][0-9]|[1-9])(?!(\\.|-|/))"];
     if (match.count > 0) {
         NSString* matchStr = [self.timeExpression substringWithRange:match[0].range];
