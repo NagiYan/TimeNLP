@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TimeNLP"
-  s.version      = "0.1.2.1"
+  s.version      = "0.1.2.2"
   s.summary      = "中文语句中的时间语义识别。即通过分析中文语句，识别出话语中提到的时间。供iOS使用."
 
   # This description is used to generate tags and improve search results.
@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+   #s.platform     = :ios
+   s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
