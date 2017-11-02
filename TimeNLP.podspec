@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TimeNLP"
-  s.version      = "0.1.2.4"
+  s.version      = "0.1.2.5"
   s.summary      = "中文语句中的时间语义识别。即通过分析中文语句，识别出话语中提到的时间。供iOS使用."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "NLP"
+  s.source_files  = "TimeNLP/nlp"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
