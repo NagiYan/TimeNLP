@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self test:@"今天17点35"];
+    [self test:@"2"];
+    [self test:@"月"];
     [self test:@"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"];
     [self test:@"1分钟后"];
     [self test:@"明天早上跑步"];

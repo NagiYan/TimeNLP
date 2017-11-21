@@ -761,10 +761,12 @@
         return;
     }
     //准备增加的时间单位是被检查的时间的上一级，将上一级时间+1
-    date = [date ng_fs_dateByAddingValue:1 byIndex:checkTimeIndex - 1];
-    
-    for (int i = 0; i < checkTimeIndex; i++) {
-        _tp.tunit[i] = @([date ng_fs_valueBy:i]);
+    if ([_tp.tunit[checkTimeIndex] integerValue] != -1) {
+        date = [date ng_fs_dateByAddingValue:1 byIndex:checkTimeIndex - 1];
+        
+        for (int i = 0; i < checkTimeIndex; i++) {
+            _tp.tunit[i] = @([date ng_fs_valueBy:i]);
+        }
     }
 }
 
