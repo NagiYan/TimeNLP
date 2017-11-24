@@ -757,7 +757,7 @@
     }
     NSInteger curTime = [date ng_fs_valueBy:checkTimeIndex];
     
-    if (curTime < [_tp.tunit[checkTimeIndex] integerValue]) {
+    if (curTime <= [_tp.tunit[checkTimeIndex] integerValue]) {
         return;
     }
     //准备增加的时间单位是被检查的时间的上一级，将上一级时间+1
