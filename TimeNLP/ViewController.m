@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self test:@"11月25号北京飞上海，11月26日落地。"];
+    [self test:@"25号北京飞上海，11月26日落地。"];
     [self test:@"今天17点35"];
     [self test:@"2"];
     [self test:@"月"];
