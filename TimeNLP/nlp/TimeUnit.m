@@ -438,10 +438,13 @@
     match = [self p_matchTimeExpressionWithRule:@"[0-9]?[0-9]?[0-9]{2}\\.((10)|(11)|(12)|([1-9]))\\.((?<!\\d))([0-3][0-9]|[1-9])"];
     if (match.count > 0) {
         tmpTarget = [self.timeExpression substringWithRange:match[0].range];
-        tmpParser = [tmpTarget componentsSeparatedByString:@"\\."];
-        _tp.tunit[0] = @([tmpParser[0] integerValue]);
-        _tp.tunit[1] = @([tmpParser[1] integerValue]);
-        _tp.tunit[2] = @([tmpParser[2] integerValue]);
+        tmpParser = [tmpTarget componentsSeparatedByString:@"."];
+        if (tmpParser.count > 0)
+            _tp.tunit[0] = @([tmpParser[0] integerValue]);
+        if (tmpParser.count > 1)
+            _tp.tunit[1] = @([tmpParser[1] integerValue]);
+        if (tmpParser.count > 2)
+            _tp.tunit[2] = @([tmpParser[2] integerValue]);
     }
 }
 
